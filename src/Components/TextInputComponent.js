@@ -8,7 +8,8 @@ import React, { Component } from 'react';
 import {
   TextInput,
   Text,
-  View
+  View,
+  Switch
 } from 'react-native';
 
 
@@ -16,7 +17,8 @@ export default class TextInputComponent extends Component{
     constructor(){
         super();
         this.state = {
-            textValue :'hello'
+            textValue :'hello',
+            switchValue : false,
         }
     }
 
@@ -30,10 +32,16 @@ export default class TextInputComponent extends Component{
         console.log("onSubmit");
     }
 
+    onSwitchCLicked(value){
+        this.setState({
+            switchValue:value
+        })
+    }
+
 
   render() {
     return (
-      <View >
+      <View>
         <TextInput 
             placeholder = "Enter Name"
             value = {this.state.textValue}
@@ -42,6 +50,11 @@ export default class TextInputComponent extends Component{
             
         />
         <Text>{this.state.textValue}</Text>
+
+        <Switch
+            value = {this.state.switchValue}
+            onValueChange = {(value) =>this.onSwitchCLicked(value)}
+        />
       </View>
     );
   }
