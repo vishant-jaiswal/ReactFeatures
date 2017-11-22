@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import Component1 from './src/Components/Component1'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -23,7 +24,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+        {/* <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
@@ -31,7 +32,8 @@ export default class App extends Component<{}> {
         </Text>
         <Text style={styles.instructions}>
           {instructions}
-        </Text>
+        </Text> */}
+        <Component1/>
       </View>
     );
   }
