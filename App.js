@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import TextInputComponent from './src/Components/TextInputComponent'
+import ListComponent from './src/Components/ListComponent'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -34,6 +35,7 @@ export default class App extends Component<{}> {
           {instructions}
         </Text> */}
         <TextInputComponent />
+        <ListComponent/>
       </View>
     );
   }
