@@ -12,6 +12,10 @@ class Component1 extends Component{
         }
     }
 
+    static defaultProps ={
+        message : 'Hi There'
+    }
+
     render(){
         return(
             <View>
