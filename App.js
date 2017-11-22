@@ -33,7 +33,7 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>
           {instructions}
         </Text> */}
-        <Component1/>
+        <Component1 message="this message is from App.js"/>
       </View>
     );
   }

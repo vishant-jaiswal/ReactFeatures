@@ -8,6 +8,7 @@ class Component1 extends Component{
         return(
             <View>
                 <Text> This is Comming from Component1.js</Text>
+                <Text>{this.props.message}</Text>
             </View>
         );
     }
