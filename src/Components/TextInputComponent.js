@@ -26,6 +26,10 @@ export default class TextInputComponent extends Component{
         })
     }
 
+    onSubmit(){
+        console.log("onSubmit");
+    }
+
 
   render() {
     return (
@@ -34,6 +38,7 @@ export default class TextInputComponent extends Component{
             placeholder = "Enter Name"
             value = {this.state.textValue}
             onChangeText = {(value) => this.onChangeText(value)}
+            onSubmitEditing = {this.onSubmit}
             
         />
         <Text>{this.state.textValue}</Text>
