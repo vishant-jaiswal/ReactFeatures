@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text } from 'react-native';
+import {View,Text,StyleSheet } from 'react-native';
 
 
 class Component1 extends Component{
@@ -18,14 +18,25 @@ class Component1 extends Component{
 
     render(){
         return(
-            <View>
-                <Text> {this.state.name}</Text>
+            <View style={styles.myView}>
+                <Text style={styles.myText}> {this.state.name}</Text>
                 <Text style={{ color:'red' }}> This is Comming from Component1.js</Text>
                 <Text>{this.state.message}</Text>
             </View>
         );
     }
 }
+
+
+const styles = StyleSheet.create({
+    myText:{
+        color:'white'
+    },
+
+    myView:{
+        backgroundColor: 'blue'
+    }
+});
 
 
 export default Component1;
