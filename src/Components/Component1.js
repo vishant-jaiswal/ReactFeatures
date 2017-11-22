@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text,StyleSheet,TouchableHighlight } from 'react-native';
+import {View,Text,StyleSheet,TouchableHighlight,TouchableOpacity } from 'react-native';
 
 
 class Component1 extends Component{
@@ -31,14 +31,18 @@ class Component1 extends Component{
                     <TouchableHighlight 
                         style = {styles.v1} 
                         onPress = {this.onPress}
-                        underlayColor = 'blue'>
+                        underlayColor = 'brown'>
                         <View >
                             <Text style={styles.myText}>View 1</Text>
                         </View>
                     </TouchableHighlight>
-                    <View style = {styles.v2}>
-                        <Text style={styles.myText}>View 2</Text>
-                    </View>
+                    <TouchableOpacity 
+                        style = {styles.v2}
+                        onPress = {this.onPress2}>
+                        <View >
+                            <Text style={styles.myText}>View 2</Text>
+                        </View>
+                    </TouchableOpacity>
                     <View style = {styles.v3}>
                         <Text style={styles.myText}>View 3</Text>
                     </View>
@@ -57,7 +61,7 @@ const styles = StyleSheet.create({
     },
 
     myView:{
-        backgroundColor: 'blue'
+        backgroundColor: 'white'
     },
 
     container:{
