@@ -11,7 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Component1 from './src/Components/Component1'
+import TextInputComponent from './src/Components/TextInputComponent'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -33,7 +33,7 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>
           {instructions}
         </Text> */}
-        <Component1 />
+        <TextInputComponent />
       </View>
     );
   }
