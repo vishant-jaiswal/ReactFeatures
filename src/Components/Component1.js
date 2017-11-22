@@ -1,8 +1,12 @@
 import React,{Component} from 'react';
-import {View,Text,StyleSheet } from 'react-native';
+import {View,Text,StyleSheet,TouchableHighlight } from 'react-native';
 
 
 class Component1 extends Component{
+
+    onPress(){
+        console.log('Area Pressed');
+    }
 
     constructor(props){
         super(props);
@@ -24,9 +28,14 @@ class Component1 extends Component{
                 <Text>{this.state.message}</Text>
 
                 <View style={styles.container}>
-                    <View style = {styles.v1}>
-                        <Text style={styles.myText}>View 1</Text>
-                    </View>
+                    <TouchableHighlight 
+                        style = {styles.v1} 
+                        onPress = {this.onPress}
+                        underlayColor = 'blue'>
+                        <View >
+                            <Text style={styles.myText}>View 1</Text>
+                        </View>
+                    </TouchableHighlight>
                     <View style = {styles.v2}>
                         <Text style={styles.myText}>View 2</Text>
                     </View>
