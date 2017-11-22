@@ -20,7 +20,7 @@ class Component1 extends Component{
         return(
             <View>
                 <Text> {this.state.name}</Text>
-                <Text> This is Comming from Component1.js</Text>
+                <Text style={{ color:'red' }}> This is Comming from Component1.js</Text>
                 <Text>{this.state.message}</Text>
             </View>
         );
