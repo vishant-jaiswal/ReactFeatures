@@ -11,6 +11,16 @@ import {
   Text,
   View
 } from 'react-native';
+import {StackNavigator} from 'react-navigation'
+import HomeScreen from './src/Screen/HomeScreen'
+import SecondScreen from './src/Screen/SecondScreen'
+
+const navigation = StackNavigator({
+  Home: { screen: HomeScreen },
+  SecondScreen: { screen: SecondScreen },
+});
+
+
 import TextInputComponent from './src/Components/TextInputComponent'
 import ListComponent from './src/Components/ListComponent'
 
@@ -21,25 +31,27 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component<{}> {
-  render() {
-    return (
-      <View style={styles.container}>
-        {/* <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text> */}
-        <TextInputComponent />
-        <ListComponent/>
-      </View>
-    );
-  }
-}
+export default navigation;
+
+// export default class App extends Component<{}> {
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         {/* <Text style={styles.welcome}>
+//           Welcome to React Native!
+//         </Text>
+//         <Text style={styles.instructions}>
+//           To get started, edit App.js
+//         </Text>
+//         <Text style={styles.instructions}>
+//           {instructions}
+//         </Text> */}
+//         <TextInputComponent />
+//         <ListComponent/>
+//       </View>
+//     );
+//   }
+// }
 
 const styles = StyleSheet.create({
   container: {
