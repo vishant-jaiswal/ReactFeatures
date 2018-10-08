@@ -6,7 +6,7 @@ const util = require('util');
 
 export default class HomeScreen extends React.Component{
     static navigationOptions = {
-        title : "First Screen"
+        title : "First Page"
     };
 
     render() {
